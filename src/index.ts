@@ -22,10 +22,10 @@ app.use('/api/topsecret_split', require('./routes/topsecret_split'));
 
 app.use(cors({
   origin: '*'
-}));
+}));  
 app.use(function(req: any, res: any, next: any) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Origin", "https://galaxy-app-back-4saf8.ondigitalocean.app");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
   next();
 });
 // starting the server
