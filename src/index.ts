@@ -12,6 +12,8 @@ app.use(express.json());
 
 // routes
 app.use(require('./routes'));
+app.use('/api/topsecret', require('./routes/topsecret'));
+app.use('/api/topsecret_split', require('./routes/topsecret_split'));
 
 // starting the server
 app.listen(app.get('port'), () => {

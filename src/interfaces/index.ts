@@ -1,1 +1,1 @@
-export { ISatellite } from './satellite.interface';
+export * from './satellite.interface';
