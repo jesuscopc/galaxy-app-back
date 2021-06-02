@@ -1,0 +1,1 @@
+export { ISatellite } from './satellite.interface';
