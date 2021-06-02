@@ -5,6 +5,11 @@ const app = express();
 
 let whitelist = ['http://localhost:4000', 'http://abc.com']
 
+//CORS dont do this in a production environemtn
+app.use(cors({
+  origin: 'https://galaxy-app-back-4saf8.ondigitalocean.app'
+}));  
+
 // settings
 app.set('port', process.env.PORT || 4000);
 
@@ -17,17 +22,6 @@ app.use(express.json());
 app.use(require('./routes'));
 app.use('/api/topsecret', require('./routes/topsecret'));
 app.use('/api/topsecret_split', require('./routes/topsecret_split'));
-
-//CORS dont do this in a production environemtn
-
-app.use(cors({
-  origin: '*'
-}));  
-app.use(function(req: any, res: any, next: any) {
-  res.header("Access-Control-Allow-Origin", "https://galaxy-app-back-4saf8.ondigitalocean.app");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With");
-  next();
-});
 // starting the server
 app.listen(app.get('port'), () => {
     console.log(`Server on port ${app.get('port')}`);
