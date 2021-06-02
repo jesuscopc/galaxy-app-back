@@ -7,7 +7,7 @@ const _ = require('underscore');
 const { Router } = require('express');
 const router = new Router();
 
-router.post('/', async (req: Request, res: Response) => {
+router.post('/', (req: Request, res: Response) => {
   const { satellites } = req.body;
   if(JSON.stringify(SATELLITES) === JSON.stringify(satellites)) {
     res.status(200).json({
