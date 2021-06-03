@@ -3,6 +3,10 @@ This is a API REST for galaxy App
 
 Clone this proyect and run `npm i`
 
+## App Live
+
+https://galaxy-app-back-4saf8.ondigitalocean.app/api/topsecret_split/sato
+
 ## Scripts
 
 * `npm run dev` -> this command startup the server on port 400 by default
