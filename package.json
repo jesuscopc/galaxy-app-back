@@ -1,0 +1,30 @@
+{
+  "name": "galaxy-app-api",
+  "version": "1.0.0",
+  "description": "This is a server for the app-ui galaxy app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "test": "jest --coverage --watchAll=false"
+  },
+  "keywords": [],
+  "author": "Jesus Manriquez",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.3.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.6.2",
+    "jest": "^27.0.3",
+    "nodemon": "^2.0.7",
+    "ts-jest": "^27.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
